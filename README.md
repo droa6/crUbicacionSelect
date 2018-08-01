@@ -1,7 +1,7 @@
 # crUbicacionSelect
-Javascript para elegir la ubicacion usando select anidados
+Javascript para elegir la ubicación usando select anidados
 
-#### Se brinca su uso tal cual, sin garantía. Por favor comentar si hay alguna corrección necesaria en cuanto a los datos desplegados o un error de código.
+#### Por favor comentar si hay alguna corrección necesaria en cuanto a los datos desplegados o un error de código.
 
 ## Modo de uso:
 
