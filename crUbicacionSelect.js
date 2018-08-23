@@ -590,13 +590,13 @@ function titleCase(str) {
 function getLocation(defaultSelected, provinciaSelected, cantonSelected, noResults) {
 	selected="";
 
-	if(provinciaSelected==undefined) {
+	if(provinciaSelected===undefined) {
 		provinciaSelected="";
 	} 
-	if(cantonSelected==undefined) {
+	if(cantonSelected===undefined) {
 		cantonSelected="";
 	}
-	if(defaultSelected==undefined) {
+	if(defaultSelected===undefined) {
 		defaultSelected="1";
 	} else {
 		defaultSelected=parseInt(defaultSelected);
@@ -625,7 +625,7 @@ function getLocation(defaultSelected, provinciaSelected, cantonSelected, noResul
 		}
 	);
 	
-	if (selected=="") {
+	if (selected==="") {
 		selected='<option value="-1">'+noResults+'</option>';
 	}
 
@@ -654,6 +654,10 @@ function setLocalizationSelects(_idProvincia,_idCanton,_idDistrito,_idPostal) {
 	idCanton=_idCanton+"_select";
 	idDistrito=_idDistrito+"_select";
 	idPostal=_idPostal;
+
+	if ( $("select#"+_idProvincia).attr('id') === undefined || $("select#"+_idProvincia).attr('id') === undefined || $("select#"+_idProvincia).attr('id') === undefined ) {
+		return;
+	}
 
 	$("select#"+_idProvincia).attr('id',idProvincia);
 	$("select#"+_idCanton).attr('id',idCanton);
